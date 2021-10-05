@@ -1,0 +1,29 @@
+/* ============================================= */
+/*              Base styles                      */
+/* ============================================= */
+
+* {
+  font-family: map-get($map: $font, $key: family-primary);
+  color: map-get($font, color-primary);
+  box-sizing: border-box;
+}
+
+p {
+  line-height: map-get($map: $font, $key: line-height-primary);
+}
+
+a {
+  text-decoration: none;
+}
+
+svg {
+  width: 25px;
+  height: 25px;
+}
+html {
+  scroll-behavior: smooth;
+}
+h3 {
+  margin-left: 10px;
+  text-transform: uppercase;
+}
