@@ -43,7 +43,8 @@ gallery.addEventListener("click", (e)=>{
            if(e.target.closest(".employee-container")) {
            popupContent.innerHTML = e.target.closest(".employee-container").innerHTML;
            $(".custom-model-main").addClass('model-open');
+       
            }
 
 });
- 
+

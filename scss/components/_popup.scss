@@ -1,0 +1,5 @@
+#popup-content {
+    @include flexy(column){
+        align-items: center;
+    }
+}
