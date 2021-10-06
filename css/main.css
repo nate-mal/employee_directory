@@ -475,16 +475,16 @@ input[type=search] {
 }
 @media screen and (min-width: 481px) {
   .employee-container .profile-image {
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
   }
 }
 .employee-text {
-  font-size: 0.8rem;
+  font-size: 12px;
 }
 @media screen and (min-width: 481px) {
   .employee-text {
-    font-size: 0.9rem;
+    font-size: 14px;
   }
 }
 .employee-text p {
