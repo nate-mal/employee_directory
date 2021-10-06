@@ -6,9 +6,4 @@
   height: 1px;
   overflow: hidden;
 }
-%fix-font-size {
-  font-size: 0.85em;
-  @include mq("s") {
-    font-size: unset;
-  }
-}
+

@@ -5,77 +5,13 @@
 /* ============================================= */
 
 /*              Colours                       */
-
-$theme-colours: (
-  "col-header": #7477bf,
-  //inUse
-  "col-nav": #4d4c72,
-  //inUse
-  "col-1": #927bc1,
-  //info for buttons
-  "col-2": #fd7856,
-  //warning for buttons
-  "col-3": #deb2ee,
-  "col-4": #7ee6fd,
-  "col-5": #50b86f,
-  "col-6": #4da2bb,
-  "col-7": #ec9fa3,
-  "col-8": #fd9f85,
-  "col-9": #e4757a,
-  // error for buttons
-  "col-10": #63cc82,
-  //color for btn buttons
-  "col-11": #51ddfc,
-  "col-12": #80e8d1,
-  "col-13": #58e1c1,
-  "col-14": #fff,
-  //inUse
-  //,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-);
-$black-filters: (
-  "white": invert(100%) sepia(100%) saturate(0%) hue-rotate(152deg)
-    brightness(103%) contrast(103%),
-  // takes a dark base color and retrive white;
-);
-// border
-$border-style: lightgray solid 0.6px;
-//main-margin
-$main-margin: 10px;
-
-/*              BUttons                       */
-
-$button-colours: (
-  "default":
-    map-get(
-      $map: $theme-colours,
-      $key: col-11,
-    ),
-  "error":
-    map-get(
-      $map: $theme-colours,
-      $key: col-9,
-    ),
-  "info":
-    map-get(
-      $map: $theme-colours,
-      $key: col-1,
-    ),
-  "success":
-    map-get(
-      $map: $theme-colours,
-      $key: col-10,
-    ),
-  "warning":
-    map-get(
-      $map: $theme-colours,
-      $key: col-2,
-    ),
-);
-
+$breakPoint:1024px;
+$max-width: 1024px;
+$primary-border: 1px solid rgb(202, 189, 189);
 /*              Fonts                       */
 
 $font: (
-  "color-primary": #000,
+  "color-primary": rgb(54, 50, 50),
   "line-height-primary": 1.45em,
   "weight-thin": 300,
   "weight-regular": 400,
@@ -85,9 +21,9 @@ $font: (
     sans-serif,
   ),
 );
-
 $breakpoints: (
-  "xs": 481,
+  "xs": 481px,
   "s": 768px,
   "m": 1024px,
 ); // I've used a map aprouch instead to a simple variable to be a lot more easy to add other breakpoints if needed
+

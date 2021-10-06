@@ -2,9 +2,19 @@
 /*             Containers                  */
 /* ============================================= */
 
-.container {
-  padding: 0 10px;
-  @include mq(s) {
-    @include center(1400px);
-  }
+
+
+input[type="search"] {
+   
+    flex:1 30%;
+    max-width: 300px;
+    height: 45px;
+    margin:15px auto 15px;
+    @include mq("m"){
+        margin:0;
+    }
+    border-radius: 5px;
+    border: $primary-border;
+    
+
 }

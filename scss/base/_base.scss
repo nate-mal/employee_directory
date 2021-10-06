@@ -8,8 +8,11 @@
   box-sizing: border-box;
 }
 
-p {
-  line-height: map-get($map: $font, $key: line-height-primary);
+body {
+  background-color: darken(#fff, 5%);
+}
+main{
+  margin:0 1rem 0;
 }
 
 a {
