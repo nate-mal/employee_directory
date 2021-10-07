@@ -12,7 +12,6 @@ header {
 }
 .gallery {
     // max-width: $max-width;
-  
     display: grid;
     grid-template-columns:1fr;
     @include mq("xs") {

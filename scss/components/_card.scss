@@ -13,11 +13,12 @@
 }
 .employee {
   &-container {
-    width: 100%;
     margin:auto;
+    width:100%;
     @include mq("xs") {
-      min-width:400px;
-      margin:0;
+      width: unset;
+      min-width: 400px;
+      height:150px;
       }
     padding: 10px;
     background-color: #fff;

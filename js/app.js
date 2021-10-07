@@ -35,7 +35,7 @@ function generateEmployeeHTML(id, employee,  version="long") {
         `
        <img src="${photo_location}" class="profile-image" />
        <div class="employee-text">
-         <p>${name}</p>
+         <p class="name">${name}</p>
          <a href="#">${email}</a>
          <p>${city}</p>
        </div>
@@ -57,7 +57,7 @@ function generateEmployeeHTML(id, employee,  version="long") {
          <div class="fullAdress">
             <p>${phone}</p>
             <p>${adress}</p>
-            <p>Birthdate: ${birthdate}</p>
+            <p>Birthday: ${birthdate}</p>
             </div>
        </div>
        
@@ -75,16 +75,56 @@ function generateGalleryEmployees(employees) {
        
         if(e.target.closest(".employee-container")) {
         const id = e.target.closest(".employee-container").id;
-        popupContent.innerHTML = generateEmployeeHTML(id, employees[id]).innerHTML;
         $(".custom-model-main").addClass('model-open');
+        popupContent.innerHTML = generateEmployeeHTML(id, employees[id]).innerHTML;
+        document.body.style.position = 'fixed';
+        document.body.style.top = `-${window.scrollY}px`;
     
         }
 
 });
+    $(".close-btn, .bg-overlay").click(function(){
+    $(".custom-model-main").removeClass('model-open');
+    document.body.style.position = '';
+    document.body.style.top = '';
+  });
 }
 
 
 
+// Search functionality;
+
+
+document.getElementById("search").addEventListener("keyup", mySearch);
+
+
+function mySearch() {
+  // Declare variables
+  var input, filter, gallery, imgs, a, i;
+  input = document.getElementById('search');
+  filter = input.value.toUpperCase();
+  gallery = document.getElementById("gallery");
+  cards = gallery.querySelectorAll('.employee-container');
+  let countCards=0;
+  let singleCard
+  // Loop through all gallery items, and hide those who don't match the search query
+  for (i = 0; i < cards.length; i++) {
+    a = cards[i].querySelector(".name").textContent;
+    
+    if (a.toUpperCase().indexOf(filter) > -1) {
+    countCards++;
+     singleCard = cards[i];
+      cards[i].style.display = "";
+      
+    } else {
+      cards[i].style.display = "none";
+    }
+  }
+  
+  
+  
+
+} 
 
 
 
@@ -105,9 +145,8 @@ function generateGalleryEmployees(employees) {
 
 
 
-  $(".close-btn, .bg-overlay").click(function(){
-    $(".custom-model-main").removeClass('model-open');
-  });
+
+  
   
 
 

@@ -449,8 +449,8 @@ input[type=search] {
 }
 
 .employee-container {
-  width: 100%;
   margin: auto;
+  width: 100%;
   padding: 10px;
   background-color: #fff;
   border-radius: 10px;
@@ -462,8 +462,9 @@ input[type=search] {
 }
 @media screen and (min-width: 481px) {
   .employee-container {
+    width: unset;
     min-width: 400px;
-    margin: 0;
+    height: 150px;
   }
 }
 .employee-container > * {
