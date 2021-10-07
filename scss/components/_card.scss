@@ -53,3 +53,23 @@
    p:first-of-type{font-weight: map-get($map: $font, $key: weight-bold)}
 }
 }
+
+
+#popup-content {
+  text-align: center;
+.profile-image {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+.shortAdress {
+  padding-top:10px;
+  padding-bottom:20px;
+}
+
+.fullAdress {
+  padding-top:20px;
+  border-top:$primary-border;
+}
+
+}

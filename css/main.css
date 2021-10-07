@@ -496,6 +496,23 @@ input[type=search] {
 }
 
 #popup-content {
+  text-align: center;
+}
+#popup-content .profile-image {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+#popup-content .shortAdress {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+#popup-content .fullAdress {
+  padding-top: 20px;
+  border-top: 1px solid #cabdbd;
+}
+
+#popup-content {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
