@@ -13,9 +13,10 @@
 }
 .employee {
   &-container {
-    margin:auto;
+    margin:0;
     width:100%;
     @include mq("xs") {
+      margin: auto;
       width: unset;
       min-width: 400px;
       height:150px;
