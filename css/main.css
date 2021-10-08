@@ -488,6 +488,10 @@ input[type=search] {
 .employee-text {
   font-size: 12px;
 }
+.employee-text p.name {
+  font-weight: 700;
+  font-size: 14px;
+}
 @media screen and (min-width: 481px) {
   .employee-text {
     font-size: 14px;
@@ -495,9 +499,6 @@ input[type=search] {
 }
 .employee-text p {
   line-height: 0.1em;
-}
-.employee-text p:first-of-type {
-  font-weight: 700;
 }
 
 #popup-content {

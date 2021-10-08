@@ -51,7 +51,7 @@ function generateEmployeeHTML(id, employee,  version="long") {
        <img src="${photo_location}" class="profile-image" />
        <div class="employee-text">
        <div class= "shortAdress">
-         <p>${name}</p>
+         <p class="name">${name}</p>
          <a href="mailto:${email}">${email}</a>
          <p>${city}</p>
         </div>

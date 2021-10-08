@@ -44,6 +44,7 @@
   }
 }
 &-text {
+  p.name{font-weight: map-get($map: $font, $key: weight-bold);font-size: 14px;}
   font-size: 12px;
   @include mq("xs") {
     font-size: 14px;
@@ -51,7 +52,7 @@
   p {
   line-height: .1em;
     }
-   p:first-of-type{font-weight: map-get($map: $font, $key: weight-bold)}
+   
 }
 }
 
@@ -63,6 +64,7 @@
   width: 150px;
   height: 150px;
 }
+
 .shortAdress {
   padding-top:10px;
   padding-bottom:20px;
