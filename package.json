@@ -1,1 +1,19 @@
-{}
+{
+  "name": "employee_directory",
+  "description": "An employee directory ",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nate-mal/employee_directory.git"
+  },
+  "author": "Nati Mal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nate-mal/employee_directory/issues"
+  },
+  "homepage": "https://github.com/nate-mal/employee_directory#readme"
+}

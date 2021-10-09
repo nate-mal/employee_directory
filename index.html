@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-  
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+  />
 
     <title>Employee Directory</title>
 </head>
@@ -22,7 +25,26 @@
                 <div class="custom-model-wrap">
                     <div id="popup-content" class="pop-up-content-wrap">
                       <!-- content -->
-           
+           <!-- Slider main container -->
+                          <div class="swiper">
+                            <!-- Additional required wrapper -->
+                            <div id="swiper-content" class="swiper-wrapper">
+                              <!-- Slides -->
+                              <!-- <div class="swiper-slide">Slide 1</div>
+                              <div class="swiper-slide">Slide 2</div>
+                              <div class="swiper-slide">Slide 3</div>
+                              ... -->
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
+
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+
+                            <!-- If we need scrollbar -->
+                            <div class="swiper-scrollbar"></div>
+                          </div>
            <!-- content -->
                     </div>
                 </div>  
@@ -39,6 +61,9 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- <script src="js/searchFilter.js"></script>
     <script src="js/app.js"></script> -->
-    <script src="js/bundle.js"></script>
+   
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script type="module" src="js/bundle.js"></script>
+    
 </body>
 </html>

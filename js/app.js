@@ -1,8 +1,32 @@
 
 const urlApi = 'https://randomuser.me/api/?results=12&inc=name, picture, email, location, phone, dob &noinfo &nat=US';
 const gallery = document.querySelector(".gallery");
-const popupContent = document.getElementById("popup-content");
+const swiperContent = document.getElementById("swiper-content");
 
+
+// init Swiper:
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: false,
+    
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
 const employees = getEmployees()
                      .then(res=>{console.log(res);
                     return res;
@@ -27,9 +51,10 @@ function generateEmployeeHTML(id, employee,  version="long") {
      const city = employee.location.city;
      const photo_location = employee.picture.large;
      let containerHTML = document.createElement("div");
-     containerHTML.className = "employee-container";
+     
      
     if(version === "short") {
+        containerHTML.className = "employee-container";
         containerHTML.id = id;
        containerHTML.innerHTML =
         `
@@ -45,6 +70,7 @@ function generateEmployeeHTML(id, employee,  version="long") {
         const phone = employee.phone;
         const adress = employee.location.street.number + " " + employee.location.street.name + ", " + employee.location.state + " " + employee.location.postcode;
         const birthdate = employee.dob.date.substr(0,10);
+        containerHTML.className = "swiper-slide";
         containerHTML.innerHTML =
         `
        <img src="${photo_location}" class="profile-image" />
@@ -70,16 +96,16 @@ function generateGalleryEmployees(employees) {
 
     employees.forEach((emp, index) => {
         gallery.appendChild(generateEmployeeHTML(index, emp, "short"));
+        swiperContent.appendChild(generateEmployeeHTML(index, emp));
     });
-    gallery.addEventListener("click", (e)=>{
+    
+    gallery.addEventListener("click", async(e)=>{
        
         if(e.target.closest(".employee-container")) {
         const id = e.target.closest(".employee-container").id;
         const body = document.querySelector("body");
-        
-        $(".custom-model-main").addClass('model-open');
-        popupContent.innerHTML = generateEmployeeHTML(id, employees[id]).innerHTML;
-        
+         await swiper.slideTo(id,false,false);  
+        $(".custom-model-main").addClass('model-open');     
         body.style.overflow = "hidden";
     
         }
@@ -128,6 +154,12 @@ function mySearch() {
   
 
 } 
+
+
+
+//swiper
+
+
 
 
 
