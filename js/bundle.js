@@ -130,7 +130,7 @@ document.getElementById("search").addEventListener("keyup", mySearch);
 
 function mySearch() {
   // Declare variables
-  var input, filter, gallery, imgs, a, i;
+  var input, filter, gallery, cards, a, i;
   input = document.getElementById('search');
   filter = input.value.toUpperCase();
   gallery = document.getElementById("gallery");
